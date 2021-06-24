@@ -1,6 +1,6 @@
 package net.ityizhan.algorithm.basic.class1;
 
-import net.ityizhan.algorithm.basic.utility.SortTestHelper;
+import net.ityizhan.algorithm.basic.utility.SortTestUtility;
 import net.ityizhan.algorithm.basic.utility.SortUtility;
 
 /**
@@ -28,7 +28,7 @@ public class Code04BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = SortTestHelper.fixedLenRandomArray(20000, 0, 100000);
-        SortTestHelper.testSort(Code04BubbleSort.class, "bubbleSort", arr);
+        int[] arr = SortTestUtility.fixedLenRandomArray(20000, 0, 100000);
+        SortTestUtility.testSort(Code04BubbleSort.class, "bubbleSort", arr);
     }
 }

@@ -1,6 +1,6 @@
 package net.ityizhan.algorithm.basic.class1;
 
-import net.ityizhan.algorithm.basic.utility.SortTestHelper;
+import net.ityizhan.algorithm.basic.utility.SortTestUtility;
 import net.ityizhan.algorithm.basic.utility.SortUtility;
 
 /**
@@ -20,7 +20,7 @@ public class Code05InsertionSort {
         for (int end = 1; end < n; end++) {
             int curNumIndex = end;
             while (curNumIndex - 1 >= 0 && arr[curNumIndex - 1] > arr[curNumIndex]) {
-                SortUtility.swap(arr, curNumIndex - 1, curNumIndex);
+                SortUtility.bitOpSwap(arr, curNumIndex - 1, curNumIndex);
                 curNumIndex--;
             }
         }
@@ -39,9 +39,9 @@ public class Code05InsertionSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = SortTestHelper.fixedLenRandomArray(1000, 0, 100000);
-        SortTestHelper.testSort(Code05InsertionSort.class, "insertSort", arr);
-        SortTestHelper.testSort(Code05InsertionSort.class, "insertSort", 100, false, 1000, 0, 100000);
+        int[] arr = SortTestUtility.fixedLenRandomArray(1000, 0, 100000);
+        SortTestUtility.testSort(Code05InsertionSort.class, "insertSort", arr);
+        SortTestUtility.testSort(Code05InsertionSort.class, "insertSort", 100, false, 1000, 0, 100000);
 
 
     }

@@ -3,13 +3,13 @@ package net.ityizhan.algorithm.basic.utility;
 import java.lang.reflect.Method;
 
 /**
- * @ClassName SortTestHelper
+ * @ClassName SortTestUtility
  * @Description 排序算法检验工具
  * @Author 骚豪: https://www.ityizhan.net
  * @Date 2021/6/23 14:15
  * @Version V1.0.0
  **/
-public class SortTestHelper {
+public class SortTestUtility {
 
     /**
      * 返回一个随机长度随机值的数组
@@ -61,16 +61,6 @@ public class SortTestHelper {
     }
 
     /**
-     * 打印arr数组的所有内容
-     */
-    public static void printArray(int[] arr) {
-        for (int value : arr) {
-            System.out.print(value + " ");
-        }
-        System.out.println();
-    }
-
-    /**
      * copy数组
      *
      * @param arr
@@ -102,9 +92,9 @@ public class SortTestHelper {
             if (!isSorted(arr)) {
                 System.out.println("排序出错: ");
                 System.out.print("原数组: ");
-                printArray(temp);
+                SortUtility.printArray(temp);
                 System.out.print("排序后数组: ");
-                printArray(arr);
+                SortUtility.printArray(arr);
             }
 
             System.out.println(clazz.getSimpleName() + " : " + (endTime - startTime) + "ms");
@@ -142,9 +132,9 @@ public class SortTestHelper {
                 if (!isSorted(arr)) {
                     System.out.println("排序出错: ");
                     System.out.print("原数组: ");
-                    printArray(temp);
+                    SortUtility.printArray(temp);
                     System.out.print("排序后数组: ");
-                    printArray(arr);
+                    SortUtility.printArray(arr);
                     return;
                 }
             }

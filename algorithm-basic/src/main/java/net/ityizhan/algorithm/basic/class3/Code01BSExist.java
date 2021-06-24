@@ -16,7 +16,7 @@ public class Code01BSExist {
         int left = 0;
         int right = arr.length - 1;
         while (left <= right) {
-            int mid = (left + right) / 2;
+            int mid = (right - left) / 2 + left;
             if (arr[mid] == num) {
                 return true;
             } else if (arr[mid] < num) {

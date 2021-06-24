@@ -1,6 +1,6 @@
 package net.ityizhan.algorithm.basic.class1;
 
-import net.ityizhan.algorithm.basic.utility.SortTestHelper;
+import net.ityizhan.algorithm.basic.utility.SortTestUtility;
 import net.ityizhan.algorithm.basic.utility.SortUtility;
 
 /**
@@ -28,8 +28,8 @@ public class Code03SelectionSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = SortTestHelper.fixedLenRandomArray(20000, 0, 100000);
-        SortTestHelper.testSort(Code03SelectionSort.class, "selectSort", arr);
+        int[] arr = SortTestUtility.fixedLenRandomArray(20000, 0, 100000);
+        SortTestUtility.testSort(Code03SelectionSort.class, "selectSort", arr);
     }
 
 }

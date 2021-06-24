@@ -1,5 +1,8 @@
 package net.ityizhan.algorithm.basic.class1;
 
+import net.ityizhan.algorithm.basic.utility.SortTestHelper;
+import net.ityizhan.algorithm.basic.utility.SortUtility;
+
 /**
  * @ClassName : Code05InsertionSort
  * @Description : 插入排序：默认认为[0 ~ end - 1)为有序的，每轮用下标为end的元素向前比较，前面的元素大就后移。直到前一个元素<=当前进行的元素就停止。end++直到数组有序
@@ -36,9 +39,10 @@ public class Code05InsertionSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {7, 234, 6, 123, 44, 1, 3, 2};
-        SortUtility.printArray(arr);
-        insertSort2(arr);
-        SortUtility.printArray(arr);
+        int[] arr = SortTestHelper.fixedLenRandomArray(1000, 0, 100000);
+        SortTestHelper.testSort(Code05InsertionSort.class, "insertSort", arr);
+        SortTestHelper.testSort(Code05InsertionSort.class, "insertSort", 100, false, 1000, 0, 100000);
+
+
     }
 }

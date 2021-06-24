@@ -1,5 +1,8 @@
 package net.ityizhan.algorithm.basic.class1;
 
+import net.ityizhan.algorithm.basic.utility.SortTestHelper;
+import net.ityizhan.algorithm.basic.utility.SortUtility;
+
 /**
  * @ClassName : Code04BubbleSort
  * @Description : 冒泡排序：从下标0开始相邻两个元素比较，较大的元素后移，这样每一轮下来都会从0 ~ end（未排序数组长度）得到一个最大值放到end位置，end--
@@ -25,9 +28,7 @@ public class Code04BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {7, 234, 6, 123, 44, 1, 3, 2};
-        SortUtility.printArray(arr);
-        bubbleSort(arr);
-        SortUtility.printArray(arr);
+        int[] arr = SortTestHelper.fixedLenRandomArray(20000, 0, 100000);
+        SortTestHelper.testSort(Code04BubbleSort.class, "bubbleSort", arr);
     }
 }

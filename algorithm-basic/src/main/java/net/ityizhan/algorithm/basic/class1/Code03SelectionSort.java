@@ -1,5 +1,8 @@
 package net.ityizhan.algorithm.basic.class1;
 
+import net.ityizhan.algorithm.basic.utility.SortTestHelper;
+import net.ityizhan.algorithm.basic.utility.SortUtility;
+
 /**
  * @ClassName : Code03_SelectionSort
  * @Description : 选择排序：每一轮从i ~ n -1中找出最小的元素跟i位置的元素进行交换，之后i++，直到数组有序
@@ -25,10 +28,8 @@ public class Code03SelectionSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {7, 234, 6, 123, 44, 1, 3, 2};
-        SortUtility.printArray(arr);
-        selectSort(arr);
-        SortUtility.printArray(arr);
+        int[] arr = SortTestHelper.fixedLenRandomArray(20000, 0, 100000);
+        SortTestHelper.testSort(Code03SelectionSort.class, "selectSort", arr);
     }
 
 }

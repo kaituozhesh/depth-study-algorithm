@@ -1,4 +1,4 @@
-package net.ityizhan.algorithm.basic.class1;
+package net.ityizhan.algorithm.basic.utility;
 
 /**
  * @ClassName : SortUtility

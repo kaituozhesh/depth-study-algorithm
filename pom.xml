@@ -11,6 +11,7 @@
     <modules>
         <module>algorithm-basic</module>
         <module>algorithm-data-structure</module>
+        <module>algorithm-leetcode</module>
     </modules>
 
     <properties>
